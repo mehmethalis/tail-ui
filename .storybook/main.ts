@@ -22,6 +22,7 @@ const config: StorybookConfig = {
     defaultName: 'Documentation',
   },
   async viteFinal(config) {
+    config.base = ''
     config.plugins = await withoutVitePlugins(config.plugins, ['vite:dts'])
     return mergeConfig(config, {
       base: '/storybook-static/',
