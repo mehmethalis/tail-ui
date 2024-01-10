@@ -66,6 +66,7 @@
     "eslint-plugin-sort-keys-fix": "^1.1.2",
     "eslint-plugin-storybook": "^0.6.15",
     "postcss": "^8.4.33",
+    "prettier": "^3.1.1",
     "storybook": "7.6.7",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",

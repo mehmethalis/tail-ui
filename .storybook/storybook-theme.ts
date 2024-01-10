@@ -6,5 +6,5 @@ export default create({
   brandUrl: '/',
   brandTarget: '_blank',
   colorPrimary: '#13005A',
-  colorSecondary: '#A0D995',
+  colorSecondary: '#38bdf8',
 })
