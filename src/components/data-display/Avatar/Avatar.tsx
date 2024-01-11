@@ -1,26 +1,58 @@
-import { useMemo } from 'react'
-import { Size } from '../../../types'
-import { AvatarProps, AvatarShape } from './types'
+import { cn } from '@/lib/utils'
+import { cva } from 'class-variance-authority'
+import { AvatarProps } from './types'
+
+const avatarClasses = cva('overflow-hidden relative inline-flex items-center justify-center ', {
+  variants: {
+    shape: {
+      circular: 'rounded-full',
+      square: 'rounded',
+    },
+    size: {
+      sm: 'w-5 h-5',
+      md: 'w-10 h-10',
+      lg: 'w-16 h-16',
+    },
+    disabledBorder: {
+      true: '',
+      false: 'ring-2 ring-white',
+    },
+    color: {
+      primary: 'bg-sky-100',
+      secondary: 'bg-neutral-100',
+      danger: 'bg-red-100',
+      success: 'bg-green-100',
+      warning: 'bg-yellow-100',
+    },
+  },
+})
 
 export const Avatar = (props: AvatarProps) => {
-  const { disabledBorder = true, id, shape = 'circular', size = 'md', src } = props
+  const {
+    className,
+    disabledBorder = true,
+    id,
+    shape = 'circular',
+    size = 'md',
+    src,
+    children,
+    color = 'primary',
+    ...rest
+  } = props
 
-  const shapeClasses: Record<AvatarShape, string> = { circular: 'rounded-full', square: 'rounded' }
-  const sizeClass = useMemo(() => {
-    const sizes: Record<Size, string> = { sm: 'w-5 h-5', md: 'w-10 h-10', lg: 'w-16 h-16' }
-    return typeof size === 'number' ? `w-${size} h-${size}` : sizes[size]
-  }, [size])
-  const borderClass = useMemo(
-    () => (disabledBorder ? '' : 'ring-2 ring-gray-300'),
-    [disabledBorder],
-  )
+  if (children)
+    return (
+      <div className={cn(avatarClasses({ shape, size, className, disabledBorder, color }))}>
+        {children}
+      </div>
+    )
 
   return (
     <img
-      alt="tail-avatar"
-      className={`${shapeClasses[shape]} ${sizeClass} ${borderClass}`}
+      className={cn(avatarClasses({ shape, size, className, disabledBorder, color }))}
       id={id}
       src={src}
+      {...rest}
     />
   )
 }

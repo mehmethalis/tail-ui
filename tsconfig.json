@@ -15,9 +15,13 @@
     "isolatedModules": false,
     "noEmit": true,
     "jsx": "react-jsx",
-    "noImplicitAny": true
+    "noImplicitAny": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
   "include": ["src"],
-  "exclude": ["theme.d.ts", "core.d.ts"],
+  "exclude": ["theme.d.ts", "core.d.ts", "node_modules"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

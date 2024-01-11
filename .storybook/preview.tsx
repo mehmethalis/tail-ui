@@ -1,12 +1,16 @@
-import type { Preview } from '@storybook/react'
-import React from 'react'
+import { Preview, ReactRenderer } from '@storybook/react'
+import { withThemeByDataAttribute } from '@storybook/addon-themes'
 
 const preview: Preview = {
   decorators: [
-    (Story, context) => {
-      window.localStorage.setItem('storybook-theme', context.globals.theme || 'light')
-      return <Story />
-    },
+    withThemeByDataAttribute<ReactRenderer>({
+      themes: {
+        light: 'light',
+        dark: 'dark',
+      },
+      defaultTheme: 'light',
+      attributeName: 'theme-mode',
+    }),
   ],
   parameters: {
     layout: 'padded',
@@ -30,21 +34,6 @@ const preview: Preview = {
           'Surfaces',
           'Utils',
         ],
-      },
-    },
-  },
-  globalTypes: {
-    theme: {
-      name: 'Theme Mode',
-      description: 'Global theme for components',
-      defaultValue: 'light',
-      toolbar: {
-        icon: 'circlehollow',
-        items: [
-          { value: 'light', icon: 'circlehollow', title: 'Light' },
-          { value: 'dark', icon: 'circle', title: 'Dark' },
-        ],
-        dynamicTitle: true,
       },
     },
   },

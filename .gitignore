@@ -10,6 +10,9 @@ lerna-debug.log*
 *.lock
 yarn.lock
 package-lock.json 
+*.yarnrc.yml
+.yarnrc.yml
+*.yarn
 
 
 node_modules

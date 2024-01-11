@@ -1,3 +1,4 @@
-type Size = 'sm' | 'md' | 'lg' | number
+type Size = 'sm' | 'md' | 'lg'
+type Color = 'primary' | 'secondary' | 'danger' | 'success' | 'warning'
 
-export { Size }
+export { Size, Color }

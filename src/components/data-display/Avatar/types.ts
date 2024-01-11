@@ -1,7 +1,25 @@
-import { Size } from '../../../types'
+import { ReactNode } from 'react'
+import { Color, Size } from '../../../types'
 
 type AvatarShape = 'circular' | 'square'
 type AvatarProps = {
+  /**
+   * Avatar bileşini resminin alt text bilgisini temsil eden proptur.
+   */
+  alt?: string
+  /**
+   * Avatar bileşinin contentinde render edilir.
+   */
+  children?: ReactNode
+  /**
+   * Avatar bileşini class namelerini temsil eden proptur.
+   */
+  className?: string
+  /**
+   * Avatar bileşini class namelerini temsil eden proptur.
+   *  @default primary
+   */
+  color?: Color
   /**
    * Eğer false verilir ise, avatar bileşenine border eklenir.
    * @default true
