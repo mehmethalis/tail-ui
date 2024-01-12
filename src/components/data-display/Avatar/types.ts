@@ -1,4 +1,4 @@
-import { ReactNode } from 'react'
+import { ElementType, ReactElement, ReactNode } from 'react'
 import { Color, Size } from '../../../types'
 
 type AvatarShape = 'circular' | 'square'
@@ -44,5 +44,23 @@ type AvatarProps = {
    */
   src?: string
 }
-
-export { AvatarProps, AvatarShape }
+type AvatarGroupProps = {
+  /**
+   * Child node olarak avatar yada birden fazla avatar alır ve gruplar.
+   */
+  children?: ReactElement<AvatarProps>[] | ReactElement<AvatarProps>
+  /**
+   * Avatar Group bileşini class namelerini temsil eden proptur.
+   */
+  className?: string
+  /**
+   * Avatar Group bileşini yönünü temsil eden proptur.
+   * @default horizontal
+   */
+  direction?: 'vertical' | 'horizontal'
+  /**
+   * Avatar Group bileşeni id değerini temsil eden proptur.
+   */
+  id?: string
+}
+export { AvatarProps, AvatarShape, AvatarGroupProps }

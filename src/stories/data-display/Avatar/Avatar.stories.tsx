@@ -1,5 +1,5 @@
 import { Color as AvatarColor, Size as AvatarSize } from '@/types'
-import { Avatar } from '@/components'
+import { Avatar, AvatarGroup } from '@/components'
 import type { Meta, StoryObj } from '@storybook/react'
 
 export default {
@@ -11,17 +11,21 @@ export default {
 type Story = StoryObj<typeof Avatar>
 
 export const Default: Story = {
-  args: {
-    src: 'https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
-  },
+  args: {},
   render: (args) => (
     <>
-      <Avatar {...args} />
       <Avatar
         {...args}
         className="mx-2"
       >
-        <span className="font-medium text-gray-600 dark:text-gray-300">JL</span>
+        <span className="font-medium text-gray-600 dark:text-gray-300">TW</span>
+      </Avatar>
+      <Avatar
+        {...args}
+        className="mx-2"
+        shape={'square'}
+      >
+        <span className="font-medium text-gray-600 dark:text-gray-300">TW</span>
       </Avatar>
     </>
   ),
@@ -53,6 +57,59 @@ export const Children: Story = {
           />
         </svg>
       </Avatar>
+    </>
+  ),
+}
+
+export const AvatarsWithGroup: Story = {
+  args: { disabledBorder: false, color: 'danger' },
+  render: (args) => (
+    <>
+      <h5>Horizontal</h5>
+      <AvatarGroup>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar
+          {...args}
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        />
+      </AvatarGroup>
+      <h5 className="mt-4">Vertical</h5>
+      <AvatarGroup direction="vertical">
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar {...args}>
+          <h4>LM</h4>
+        </Avatar>
+        <Avatar
+          {...args}
+          disabledBorder={false}
+          src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
+        />
+      </AvatarGroup>
     </>
   ),
 }

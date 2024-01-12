@@ -1,2 +1,2 @@
-export { Avatar } from './Avatar'
-export type * from "./types"
+export { Avatar, AvatarGroup } from './Avatar'
+export type * from './types'

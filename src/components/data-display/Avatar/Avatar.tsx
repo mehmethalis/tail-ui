@@ -1,6 +1,6 @@
 import { cn } from '@/lib/utils'
 import { cva } from 'class-variance-authority'
-import { AvatarProps } from './types'
+import { AvatarGroupProps, AvatarProps } from './types'
 
 const avatarClasses = cva('overflow-hidden relative inline-flex items-center justify-center ', {
   variants: {
@@ -54,5 +54,26 @@ export const Avatar = (props: AvatarProps) => {
       src={src}
       {...rest}
     />
+  )
+}
+
+const avatarGroupClasses = cva('flex', {
+  variants: {
+    direction: {
+      vertical: 'flex-col -space-y-4 rtl:space-y-reverse',
+      horizontal: '-space-x-4 rtl:space-x-reverse',
+    },
+  },
+})
+
+export const AvatarGroup = (props: AvatarGroupProps) => {
+  const { children, className, direction = 'horizontal', ...rest } = props
+  return (
+    <div
+      className={cn(avatarGroupClasses({ className, direction }))}
+      {...rest}
+    >
+      {children}
+    </div>
   )
 }

@@ -77,6 +77,5 @@
     "vite": "^5.0.8",
     "vite-plugin-dts": "^3.7.0",
     "vite-plugin-eslint": "^1.8.1"
-  },
-  "packageManager": "yarn@4.0.2"
+  }
 }
