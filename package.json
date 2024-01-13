@@ -35,6 +35,7 @@
     "serve-storybook": "serve storybook-static"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.0",
     "react": "^18.2.0",
@@ -50,6 +51,7 @@
     "@storybook/react": "7.6.7",
     "@storybook/react-vite": "7.6.7",
     "@storybook/test": "7.6.7",
+    "@storybook/theming": "^7.6.8",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.4.0",

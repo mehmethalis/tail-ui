@@ -2,7 +2,7 @@ import { cn } from '@/lib/utils'
 import { cva } from 'class-variance-authority'
 import { AvatarGroupProps, AvatarProps } from './types'
 
-const avatarClasses = cva('overflow-hidden relative inline-flex items-center justify-center ', {
+const avatarClasses = cva('overflow-hidden relative inline-flex items-center justify-center', {
   variants: {
     shape: {
       circular: 'rounded-full',

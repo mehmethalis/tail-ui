@@ -1,4 +1,4 @@
-import { ElementType, ReactElement, ReactNode } from 'react'
+import { ReactElement, ReactNode } from 'react'
 import { Color, Size } from '../../../types'
 
 type AvatarShape = 'circular' | 'square'
@@ -16,7 +16,7 @@ type AvatarProps = {
    */
   className?: string
   /**
-   * Avatar bileşini class namelerini temsil eden proptur.
+   * Avatar bileşini rengini temsil eden proptur.
    *  @default primary
    */
   color?: Color
