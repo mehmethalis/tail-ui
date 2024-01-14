@@ -22,6 +22,10 @@ type IconProps = {
    */
   color?: Color
   /**
+   * Icon bileşeni class namelerini temsil eden proptur.
+   */
+  className?: string
+  /**
    * Render edilecek icon animasyonu hızını ms cinsinden temsil eden proptur.
    * @default 1300
    */
@@ -31,10 +35,6 @@ type IconProps = {
    * @default true
    */
   disableFixed?: boolean
-  /**
-   * Icon bileşeni class namelerini temsil eden proptur.
-   */
-  className?: string
   /**
    * Icon bileşeni ailesini temsil eden proptur.
    * @default classic
