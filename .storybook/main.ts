@@ -21,6 +21,7 @@ const config: StorybookConfig = {
     autodocs: 'tag',
     defaultName: 'Documentation',
   },
+  staticDirs: ['../public'],
   async viteFinal(config) {
     config.plugins = await withoutVitePlugins(config.plugins, ['vite:dts'])
     return mergeConfig(config, {
