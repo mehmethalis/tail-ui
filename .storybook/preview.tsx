@@ -1,5 +1,6 @@
 import { Preview, ReactRenderer } from '@storybook/react'
 import { withThemeByDataAttribute } from '@storybook/addon-themes'
+import '@/styles/index.css'
 
 const preview: Preview = {
   decorators: [
