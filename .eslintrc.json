@@ -78,7 +78,7 @@
     "@typescript-eslint/dot-notation": "off",
     "@typescript-eslint/no-empty-interface": "off",
     "@typescript-eslint/default-param-last": "off",
-    "no-console": "error",
+    "no-console": "off",
     "no-bitwise": "off",
     "no-fallthrough": "off",
     "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }]
