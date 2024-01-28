@@ -68,4 +68,4 @@ type IconProps = {
   size?: Size
 }
 
-export { IconProps }
+export { IconProps, IconName }
