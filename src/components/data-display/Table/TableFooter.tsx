@@ -1,16 +1,13 @@
-export const TableFooter = () => {
+import { ReactNode } from 'react'
+
+type TableFooterProps = {
+  footer: ReactNode
+}
+export const TableFooter = (props: TableFooterProps) => {
+  const { footer } = props
   return (
-    <tfoot>
-      <tr className="font-semibold text-gray-900 dark:text-white">
-        <th
-          className="px-6 py-3 text-base"
-          scope="row"
-        >
-          Total
-        </th>
-        <td className="px-6 py-3">3</td>
-        <td className="px-6 py-3">21,000</td>
-      </tr>
-    </tfoot>
+    <div className="px-6 py-4">
+      <tfoot>{footer}</tfoot>
+    </div>
   )
 }
