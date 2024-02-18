@@ -5,6 +5,6 @@ addons.setConfig({
   theme: storybookTheme,
   sidebar: {
     showRoots: true,
-    collapsedRoots: ['inputs', 'feedback', 'layout', 'navigation', 'surfaces'],
+    collapsedRoots: ['inputs', 'layout', 'navigation', 'surfaces'],
   },
 })
