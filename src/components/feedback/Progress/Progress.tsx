@@ -43,7 +43,7 @@ export const Progress = (props: ProgressProps) => {
         className={cn(progressClasses({ color, size }))}
         style={{ width: `${width}%` }}
       >
-        {!disableLabel && `%${width}`}
+        {!disableLabel && `% ${width}`}
       </div>
     </div>
   )

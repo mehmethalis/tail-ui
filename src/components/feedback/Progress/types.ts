@@ -3,10 +3,6 @@ import { ReactNode } from 'react'
 
 type ProgressProps = {
   /**
-   * Progress bileşinin contentinde render edilir.
-   */
-  children?: ReactNode
-  /**
    * Progress bileşini class namelerini temsil eden proptur.
    */
   className?: string
