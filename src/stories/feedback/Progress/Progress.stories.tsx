@@ -10,6 +10,6 @@ export default {
 type Story = StoryObj<typeof Progress>
 
 export const Default: Story = {
-  args: {},
+  args: { width: 35, color: 'secondary' },
   render: (args) => <Progress {...args} />,
 }
