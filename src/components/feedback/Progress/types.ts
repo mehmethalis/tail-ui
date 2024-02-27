@@ -3,10 +3,6 @@ import { ReactNode } from 'react'
 
 type ProgressProps = {
   /**
-   * Progress bileşinin contentinde render edilir.
-   */
-  children?: ReactNode
-  /**
    * Progress bileşini class namelerini temsil eden proptur.
    */
   className?: string
@@ -16,10 +12,10 @@ type ProgressProps = {
    */
   color?: Color
   /**
-   * Eğer false geçilir ise, Progress bileşinine border ekler.
-   *  @default true
+   * Eğer true geçilir ise, Progress bileşinin güncel değeri label olarak gösterilmez.
+   *  @default false
    */
-  disableBordered?: boolean
+  disableLabel?: boolean
   /**
    * Progress bileşini boyutunu temsil eden proptur.
    *  @default md
@@ -29,5 +25,10 @@ type ProgressProps = {
    * Progress bileşeni id değerini temsil eden proptur.
    */
   id?: string
+  /**
+   * Progress bileşeni yüzde değerini temsil eden proptur.
+   * @default 10
+   */
+  width?: number
 }
 export { ProgressProps }
