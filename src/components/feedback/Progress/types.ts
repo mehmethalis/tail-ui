@@ -1,5 +1,4 @@
 import { Color, Size } from '@/types'
-import { ReactNode } from 'react'
 
 type ProgressProps = {
   /**

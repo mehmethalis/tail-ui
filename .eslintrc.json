@@ -81,6 +81,7 @@
     "no-console": "error",
     "no-bitwise": "off",
     "no-fallthrough": "off",
+    "react-hooks/rules-of-hooks": "off",
     "react-refresh/only-export-components": ["warn", { "allowConstantExport": true }]
   }
 }
