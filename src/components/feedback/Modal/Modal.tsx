@@ -29,19 +29,14 @@ export const Modal = (props: ModalProps) => {
       root.id = 'portal-root'
       document.body.appendChild(root)
     }
-    if (!isOpen) {
-      setTimeout(() => {
-        portalRoot.removeChild(portalRoot.firstElementChild)
-      }, 350)
-    }
-  }, [isOpen])
+  }, [])
 
   if (!document.getElementById('portal-root') || !isOpen) return
 
   return createPortal(
     <div
       aria-hidden="true"
-      className={`fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center transition-opacity ease-in-out duration-300 ${isOpen ? ' opacity-100' : ' opacity-0 -z-50 none'}`}
+      className={`fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex justify-center items-center transition-opacity ease-in-out duration-300`}
       id={id || 'modal-wrapper'}
       onClick={handleBackdropClose}
       role="dialog"
@@ -58,7 +53,7 @@ export const Modal = (props: ModalProps) => {
                 type="button"
               >
                 <Icon
-                  color="secondary"
+                  color={'secondary'}
                   name="xmark"
                 />
                 <span className="sr-only">Close modal</span>
