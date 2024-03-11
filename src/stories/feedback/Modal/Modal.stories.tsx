@@ -12,9 +12,8 @@ type Story = StoryObj<typeof Modal>
 
 export const Default: Story = {
   args: {},
-  render: () => {
+  render: (args) => {
     const [open, setOpen] = useState(false)
-    window.console.log(open)
 
     const Footer = () => (
       <button
@@ -36,6 +35,7 @@ export const Default: Story = {
         </button>
         <br />
         <Modal
+          {...args}
           footer={<Footer />}
           isOpen={open}
           onClose={() => setOpen(false)}

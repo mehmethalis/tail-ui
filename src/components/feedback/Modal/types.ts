@@ -1,4 +1,3 @@
-import { Color, Size } from '@/types'
 import { ReactNode } from 'react'
 
 type ModalProps = {
@@ -10,16 +9,6 @@ type ModalProps = {
    * Modal bileşini contentinde render edilir.
    */
   children?: ReactNode
-  /**
-   * Modal bileşini rengini temsil eden proptur.
-   *  @default primary
-   */
-  color?: Color
-  /**
-   * Modal bileşini boyutunu temsil eden proptur.
-   *  @default md
-   */
-  size?: Size
   /**
    * Modal bileşini footer alanında render edilir.
    */
