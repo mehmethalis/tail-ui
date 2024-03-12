@@ -1,21 +1,44 @@
-# React Tail UI Lib
+# Tail UI
 
-React generated libraries like Tail UI are collections of built and reusable user interface units built to work seamlessly with React applications. These libraries are designed to facilitate and simplify the process of creating user enhancements for web applications.
+Tailui is a **React UI library** that streamlines development and enhances UI design. It includes customizable components and sleek styles for stunning and responsive interfaces. **Tailui** provides all the necessary tools to create engaging and delightful modern web applications.
 
-## Installation
+## Getting started
 
-Use the package manager [pnpm / yarn / npm / bun](https://pip.pypa.io/en/stable/) to install tail-ui.
-
+### 1. Install Package
+Install the tail ui lib from your command line.
 ```bash
 pnpm install tail-ui
 ```
+### 2. Import Styles
+```ts
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import App from './App.tsx'
+import "tail-ui/index.css"; // ui component styles
 
-### Storybook to preview components
-
-First, run the development server:
-
-```bash
-npm install & npm run storybook
-# or
-yarn & yarn storybook
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+)
 ```
+### 3. Example Component
+```ts
+import { Alert } from "tail-ui";
+
+function App() {
+  return (
+    <Alert color="warning" size="lg">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+    </Alert>
+  );
+}
+
+export default App;
+```
+
+## Storybook
+You can visit the storybook application to view all components. [See](https://tailui.haliscicek.com/)
+
+## Contributing
+Contributions to TailUI are always welcome!
