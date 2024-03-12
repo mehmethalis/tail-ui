@@ -1,4 +1,4 @@
-import { Icon } from '@/lib'
+import { Icon } from '@/index'
 import { ModalProps } from './types'
 import { useCallback, BaseSyntheticEvent, useEffect } from 'react'
 import { createPortal } from 'react-dom'

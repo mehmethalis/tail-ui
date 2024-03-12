@@ -1,7 +1,7 @@
 import { cva } from 'class-variance-authority'
 import { SkeletonProps } from './types'
 import { cn } from '@/lib/utils'
-import { Icon } from '@/lib'
+import { Icon } from '@/index'
 const skeletonClasses = cva('h-2.5 bg-gray-200 rounded-full dark:bg-gray-700  mb-4', {
   variants: {
     size: {

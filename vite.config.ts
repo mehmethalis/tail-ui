@@ -31,16 +31,16 @@ export default defineConfig({
     outDir: 'dist',
     sourcemap: true,
     lib: {
-      entry: {
-        lib: './src/lib.ts',
-      },
-      formats: ['es', 'cjs'],
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'tail-ui',
+      fileName: (format) => `index.${format}.js`,
     },
     rollupOptions: {
-      external: ['react'],
+      external: ['react', 'react-dom'],
       output: {
         globals: {
           react: 'React',
+          'react-dom': 'ReactDOM',
         },
       },
     },
