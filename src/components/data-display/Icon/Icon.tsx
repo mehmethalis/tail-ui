@@ -42,6 +42,10 @@ const iconClasses = cva('', {
       true: '',
       false: 'fa-fw',
     },
+    isBrand: {
+      true: 'fa-brands',
+      false: '',
+    },
     flip: {
       horizontal: 'fa-flip-horizontal',
       vertical: 'fa-flip-vertical',
@@ -62,6 +66,7 @@ export const Icon = (props: IconProps) => {
     rotation,
     size = 'md',
     variant = 'solid',
+    isBrand = false,
   } = props
 
   return (
@@ -77,6 +82,7 @@ export const Icon = (props: IconProps) => {
           rotation,
           size,
           variant,
+          isBrand,
         }),
       )}`}
       style={{ '--fa-animation-duration': `${duration}ms` } as CSSProperties}

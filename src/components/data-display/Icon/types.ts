@@ -62,6 +62,11 @@ type IconProps = {
    */
   id?: string
   /**
+   * Eğer true velir ise, brand icon kullanılabilir olur. github vb.
+   * @default false
+   */
+  isBrand?: boolean
+  /**
    * Icon boyutunu temsil eden proptur.
    * @default md
    */
