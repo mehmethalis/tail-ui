@@ -1,7 +1,7 @@
 {
   "name": "tail-ui",
   "private": false,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "haliscicek.com",
   "type": "module",
   "main": "dist/index.umd.js",
