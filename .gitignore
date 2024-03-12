@@ -6,14 +6,11 @@ yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
-*lock
-*.lock
 yarn.lock
 package-lock.json 
 *.yarnrc.yml
 .yarnrc.yml
 *.yarn
-*pnpm-lock.yaml
 
 node_modules
 dist
