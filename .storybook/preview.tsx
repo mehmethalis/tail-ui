@@ -25,7 +25,7 @@ const preview: Preview = {
     options: {
       storySort: {
         order: [
-          'Tail UI Library: Overview',
+          'Tail UI: Overview',
           'Data Display',
           'Data Grid',
           'Inputs',
